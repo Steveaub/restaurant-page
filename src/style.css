@@ -1,0 +1,141 @@
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;  /* Clean, modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav button {
+    background-color: #555;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 600;
+}
+
+nav button:hover {
+    background-color: #777;
+    transform: translateY(-2px);
+}
+
+/* Centered content container */
+#content {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header text styling */
+h1 {
+    font-size: 40px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 800px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Main image styling */
+img {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styles (Menu, Contact) */
+.menu, .contact {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Contact section styles */
+.contact p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+/* Add some media queries for responsiveness */
+@media (max-width: 768px) {
+    nav button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    p, ul li {
+        font-size: 16px;
+    }
+}
