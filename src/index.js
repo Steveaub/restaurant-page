@@ -1,33 +1,33 @@
-console.log("Hello, Restaurant Page!");
 
-// Import the homepage, menu, and contact functions
+import './style.css';
+console.log('Hello from the Restaurant Page!');
+
 import loadHomePage from './homepage';
 import loadMenu from './menu';
 import loadContact from './contact';
-import './style.css';
 
 
-// Call the function to load the homepage content when the page is loaded
-loadHomePage();
+function init() {
+  const content = document.getElementById('content');
 
-// Add event listeners for tab switching
-function addTabSwitching() {
-    const homeButton = document.getElementById('home-btn');
-    const menuButton = document.getElementById('menu-btn');
-    const contactButton = document.getElementById('contact-btn');
+  // Initially load the home page
+  content.appendChild(loadHomePage());
 
-    homeButton.addEventListener('click', () => {
-        loadHomePage();
-    });
+  // Set up event listeners for menu buttons (you can create the buttons later)
+  document.getElementById('home-btn').addEventListener('click', () => {
+    content.innerHTML = '';
+    content.appendChild(loadHomePage());
+  });
 
-    menuButton.addEventListener('click', () => {
-        loadMenu();
-    });
+  document.getElementById('menu-btn').addEventListener('click', () => {
+    content.innerHTML = '';
+    content.appendChild(loadMenu());
+  });
 
-    contactButton.addEventListener('click', () => {
-        loadContact();
-    });
+  document.getElementById('contact-btn').addEventListener('click', () => {
+    content.innerHTML = '';
+    content.appendChild(loadContact());
+  });
 }
 
-// Initialize the tab switching functionality
-addTabSwitching();
+init();

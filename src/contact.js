@@ -1,24 +1,19 @@
-function loadContact() {
-    const content = document.getElementById('content');
-    content.innerHTML = '';  // Clear previous content
+export default function loadContact() {
+  const content = document.createElement('div');
+  
+  const heading = document.createElement('h2');
+  heading.textContent = 'Contact Us';
+  
+  const image = document.createElement('img');
+  image.src = 'https://via.placeholder.com/800x400.png?text=Contact+Us';
+  image.alt = 'Contact';
 
-    const contactDiv = document.createElement('div');
-    contactDiv.classList.add('contact');
+  const description = document.createElement('p');
+  description.textContent = 'For reservations and inquiries, please contact us at 555-1234 or email us at info@restaurant.com.';
 
-    const headline = document.createElement('h2');
-    headline.textContent = "Contact Us";
+  content.appendChild(heading);
+  content.appendChild(image);
+  content.appendChild(description);
 
-    const phone = document.createElement('p');
-    phone.textContent = "Phone: (123) 456-7890";
-
-    const email = document.createElement('p');
-    email.textContent = "Email: info@myrestaurant.com";
-
-    contactDiv.appendChild(headline);
-    contactDiv.appendChild(phone);
-    contactDiv.appendChild(email);
-
-    content.appendChild(contactDiv);  // Add the contact content to #content
+  return content;
 }
-
-export default loadContact;
