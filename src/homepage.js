@@ -1,3 +1,5 @@
+import chefImageSrc from './chef-image.jpg'; // Import the image file
+
 export default function loadHomePage() {
   const content = document.createElement('div');
   content.classList.add('homepage');
@@ -42,12 +44,12 @@ export default function loadHomePage() {
   menuSection.appendChild(menuText);
   content.appendChild(menuSection);
 
-  // Team Highlight Section
+  // Team Highlight Section (Chef Image from src)
   const teamSection = document.createElement('section');
   teamSection.classList.add('team-highlight');
   
   const teamImage = document.createElement('img');
-  teamImage.src = 'https://images.unsplash.com/photo-1555992336-03a23c4a7626?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE2fHxjaGVmfGVufDB8fHx8MTYwOTg0NDk5OA&ixlib=rb-1.2.1&q=80&w=1080';
+  teamImage.src = chefImageSrc; // Use the imported image source
   teamImage.alt = 'Our Chef';
 
   const teamText = document.createElement('div');
